@@ -1,0 +1,32 @@
+{
+  "Very Low": {
+    "D": "The Direction state is conserving force. Pause the push and name the pressure before choosing any next move.",
+    "I": "The Expression state is quieter right now. Do not perform around the feeling; let the signal settle first.",
+    "S": "The Stability state is seeking safety. Return to one familiar rhythm and let the body find ground.",
+    "C": "The Clarity state is protecting itself through control. Reduce the field to one fact, one breath, one next line."
+  },
+  "Low": {
+    "D": "The Direction state may want movement before energy has returned. Choose the smallest decision that reduces pressure.",
+    "I": "The Expression state may be muted beneath the surface. Say one honest thing without trying to carry the room.",
+    "S": "The Stability state may be absorbing too much. Name one need before adjusting yourself again.",
+    "C": "The Clarity state may be tightening around standards. Build the smallest useful structure and stop there."
+  },
+  "Neutral": {
+    "D": "The Direction state is readable. Move one pressure point forward without forcing the whole situation.",
+    "I": "The Expression state is available. Give one idea a clear container so it can become useful.",
+    "S": "The Stability state is steady enough to notice. Keep the rhythm, but do not disappear inside it.",
+    "C": "The Clarity state is available. Refine one piece, then let the next move happen before overbuilding."
+  },
+  "Elevated": {
+    "D": "The Direction state has momentum. Use it with timing, not force.",
+    "I": "The Expression state has charge. Let the spark land somewhere real instead of scattering across the room.",
+    "S": "The Stability state can carry energy without losing rhythm. Support the movement while keeping yourself included.",
+    "C": "The Clarity state is sharp. Turn precision into a usable next step, not another delay."
+  },
+  "Very High": {
+    "D": "The Direction state is highly activated. Act with a boundary so momentum does not become overcontrol.",
+    "I": "The Expression state is highly activated. Share the spark, then anchor it in one clear action.",
+    "S": "The Stability state is holding strong energy. Keep the pace humane and protect the rhythm.",
+    "C": "The Clarity state is highly activated. Launch the smallest complete version before refinement becomes pressure."
+  }
+}

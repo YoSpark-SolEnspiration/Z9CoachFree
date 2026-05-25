@@ -1,0 +1,50 @@
+{
+  "Stage 1": {
+    "summary": "Trust vs. Mistrust — This state is reading safety, reliability, support, and emotional predictability.",
+    "tip": "Notice whether support feels available, tested, resisted, or quietly needed.",
+    "sol_spark": "The visible question is not weakness. It is whether the environment feels safe enough to receive support.",
+    "mindset_goal": "Reduce vigilance by returning to one predictable signal: breath, routine, place, or person."
+  },
+  "Stage 2": {
+    "summary": "Autonomy vs. Shame — This state is reading agency, control, self-direction, and fear of exposure.",
+    "tip": "Notice where the state wants ownership but hesitates before being seen trying.",
+    "sol_spark": "The visible question is not perfection. It is whether the person can move without shame taking the wheel.",
+    "mindset_goal": "Choose one small act of agency that restores motion without demanding full certainty."
+  },
+  "Stage 3": {
+    "summary": "Initiative vs. Guilt — This state is reading action, experimentation, interruption, and permission to begin.",
+    "tip": "Notice where initiative is present but being delayed, softened, or overcorrected.",
+    "sol_spark": "The visible question is not whether the idea is complete. It is whether the state can begin without guilt closing the door.",
+    "mindset_goal": "Start one visible attempt before the full path is proven."
+  },
+  "Stage 4": {
+    "summary": "Industry vs. Inferiority — This state is reading competence, effort, comparison, skill, and visible capability.",
+    "tip": "Notice whether effort feels measurable or emotionally generalized into self-worth.",
+    "sol_spark": "The visible question is not whether the person is capable. It is whether effort can be seen without becoming a verdict.",
+    "mindset_goal": "Make progress visible through one concrete action, not a full performance review."
+  },
+  "Stage 5": {
+    "summary": "Identity vs. Role Confusion — This state is reading direction, role pressure, self-definition, and identity visibility.",
+    "tip": "Notice where the person is adapting to expectations instead of recognizing the signal underneath.",
+    "sol_spark": "The visible question is not who the person must become. It is which direction still feels internally coherent.",
+    "mindset_goal": "Reduce competing roles long enough for one clear internal signal to reappear."
+  },
+  "Stage 6": {
+    "summary": "Intimacy vs. Isolation — This state is reading closeness, trust, relational honesty, and emotional exposure.",
+    "tip": "Notice whether connection is real, performed, avoided, or protected from view.",
+    "sol_spark": "The visible question is not whether the person wants connection. It is whether connection can happen without losing the self.",
+    "mindset_goal": "Create one lower-pressure moment of honest contact."
+  },
+  "Stage 7": {
+    "summary": "Generativity vs. Stagnation — This state is reading contribution, usefulness, responsibility, and long-term meaning.",
+    "tip": "Notice whether contribution feels intentional or endlessly reactive.",
+    "sol_spark": "The visible question is not how much the person can carry. It is whether the contribution still has meaning.",
+    "mindset_goal": "Choose one useful contribution that does not require overextending the self."
+  },
+  "Stage 8": {
+    "summary": "Integrity vs. Despair — This state is reading reflection, integration, regret, meaning, and life-pattern coherence.",
+    "tip": "Notice whether reflection is organizing experience or reliving it.",
+    "sol_spark": "The visible question is not whether the past was perfect. It is whether the story can still become coherent.",
+    "mindset_goal": "Name one part of the past that can be integrated without letting it define the whole pattern."
+  }
+}

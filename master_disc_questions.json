@@ -1,0 +1,578 @@
+[
+  {
+    "question": "I assert my opinion even if others disagree.",
+    "trait": "D",
+    "style_note": "DD",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I enjoy taking charge of situations.",
+    "trait": "D",
+    "style_note": "DI",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I make decisions quickly and confidently.",
+    "trait": "D",
+    "style_note": "DC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I like to challenge the status quo.",
+    "trait": "D",
+    "style_note": "DD",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I feel energized when overcoming obstacles.",
+    "trait": "D",
+    "style_note": "DS",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I thrive in competitive environments.",
+    "trait": "D",
+    "style_note": "DD",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I speak up when I believe something is wrong.",
+    "trait": "D",
+    "style_note": "DI",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I am comfortable leading others.",
+    "trait": "D",
+    "style_note": "DS",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I focus on results and outcomes.",
+    "trait": "D",
+    "style_note": "DC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I push others to achieve high standards.",
+    "trait": "D",
+    "style_note": "DC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I stand firm under pressure.",
+    "trait": "D",
+    "style_note": "DS",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I take responsibility for major decisions.",
+    "trait": "D",
+    "style_note": "DD",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+    {
+        "question": "I enjoy socializing and making new friends.",
+        "trait": "I",
+        "style_note": "II",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I bring energy into group settings.",
+        "trait": "I",
+        "style_note": "ID",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I often express emotions openly.",
+        "trait": "I",
+        "style_note": "IS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I like to share stories and experiences.",
+        "trait": "I",
+        "style_note": "IC",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I value encouragement and recognition.",
+        "trait": "I",
+        "style_note": "IS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I motivate others through enthusiasm.",
+        "trait": "I",
+        "style_note": "ID",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I focus on creating positive environments.",
+        "trait": "I",
+        "style_note": "II",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I adapt easily in social situations.",
+        "trait": "I",
+        "style_note": "IC",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I enjoy being the center of attention.",
+        "trait": "I",
+        "style_note": "ID",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I prefer open communication styles.",
+        "trait": "I",
+        "style_note": "IS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I enjoy collaborative brainstorming.",
+        "trait": "I",
+        "style_note": "IC",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I trust people quickly.",
+        "trait": "I",
+        "style_note": "IS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I prefer consistency and routine.",
+        "trait": "S",
+        "style_note": "SS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I am loyal and dependable.",
+        "trait": "S",
+        "style_note": "SD",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I stay calm during conflict.",
+        "trait": "S",
+        "style_note": "SC",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I listen more than I speak.",
+        "trait": "S",
+        "style_note": "SI",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I work well in team settings.",
+        "trait": "S",
+        "style_note": "SD",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I support others quietly but consistently.",
+        "trait": "S",
+        "style_note": "SS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I feel anxious during sudden changes.",
+        "trait": "S",
+        "style_note": "SC",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I value harmony in relationships.",
+        "trait": "S",
+        "style_note": "SI",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I am patient when working with others.",
+        "trait": "S",
+        "style_note": "SD",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I follow through with commitments.",
+        "trait": "S",
+        "style_note": "SC",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I prefer helping over leading.",
+        "trait": "S",
+        "style_note": "SI",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+    {
+        "question": "I like to avoid conflict.",
+        "trait": "S",
+        "style_note": "SS",
+        "options": [
+            "Strongly Agree (Always / Confidently)",
+            "Agree (Most of the time / Often)",
+            "Neutral (Sometimes / Occasionally)",
+            "Disagree (Rarely / Hesitant)",
+            "Strongly Disagree (Almost never / Not at all)"
+        ]
+    },
+  {
+    "question": "I enjoy creating systems and rules.",
+    "trait": "C",
+    "style_note": "CC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I double-check work for errors.",
+    "trait": "C",
+    "style_note": "CS",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I prefer facts over feelings.",
+    "trait": "C",
+    "style_note": "CD",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I follow policies and procedures closely.",
+    "trait": "C",
+    "style_note": "CC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I enjoy working independently on complex tasks.",
+    "trait": "C",
+    "style_note": "CI",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I seek clarity before acting.",
+    "trait": "C",
+    "style_note": "CS",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I feel confident when tasks are clearly defined.",
+    "trait": "C",
+    "style_note": "CI",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I keep emotions separate from decisions.",
+    "trait": "C",
+    "style_note": "CD",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I respect hierarchy and structure.",
+    "trait": "C",
+    "style_note": "CC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I research before making choices.",
+    "trait": "C",
+    "style_note": "CI",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I ask detailed questions to ensure accuracy.",
+    "trait": "C",
+    "style_note": "CS",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  },
+  {
+    "question": "I take pride in precision and accuracy.",
+    "trait": "C",
+    "style_note": "CC",
+    "options": [
+      "Strongly Agree (Always / Confidently)",
+      "Agree (Most of the time / Often)",
+      "Neutral (Sometimes / Occasionally)",
+      "Disagree (Rarely / Hesitant)",
+      "Strongly Disagree (Almost never / Not at all)"
+    ]
+  }
+]

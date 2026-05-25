@@ -1,0 +1,34 @@
+{
+  "D": {
+    "state_signal": "The state is moving toward direction, control, pressure management, and visible action.",
+    "resistance_pattern": "When overloaded, this pattern may force movement before trust, pacing, or relational clarity has caught up.",
+    "immediate_step": "Choose one pressure point and reduce it into one clean decision, one boundary, or one next action.",
+    "regulation_story": "The healthy D story is not about overpowering the room. It is about carrying direction without becoming trapped inside control.",
+    "healthy_read": "Read the Healthy regulation story first. Look for where the character keeps direction while restoring timing, trust, and connection.",
+    "archive_ohu": "Healthy"
+  },
+  "I": {
+    "state_signal": "The state is moving toward expression, connection, visibility, and emotional motion.",
+    "resistance_pattern": "When overloaded, this pattern may perform movement before the real feeling has been named.",
+    "immediate_step": "Say the real thing once, then give the energy a clear container so it can become useful.",
+    "regulation_story": "The healthy I story is not about being louder. It is about letting expression become honest enough to land.",
+    "healthy_read": "Read the Healthy regulation story first. Look for where the character keeps the spark while restoring grounding, truth, and follow-through.",
+    "archive_ohu": "Healthy"
+  },
+  "S": {
+    "state_signal": "The state is moving toward steadiness, care, rhythm, safety, and relational continuity.",
+    "resistance_pattern": "When overloaded, this pattern may preserve peace while delaying honesty, need, or self-inclusion.",
+    "immediate_step": "Name one need before adjusting yourself around everyone else's needs.",
+    "regulation_story": "The healthy S story is not about keeping everything calm. It is about protecting rhythm without disappearing inside the support role.",
+    "healthy_read": "Read the Healthy regulation story first. Look for where the character keeps care while restoring boundary, voice, and self-presence.",
+    "archive_ohu": "Healthy"
+  },
+  "C": {
+    "state_signal": "The state is moving toward clarity, structure, precision, preparation, and internal control.",
+    "resistance_pattern": "When overloaded, this pattern may keep refining the structure long after the next move is already visible.",
+    "immediate_step": "Create the smallest useful structure, then act before refinement becomes another delay.",
+    "regulation_story": "The healthy C story is not about perfect certainty. It is about letting clarity serve movement instead of replacing it.",
+    "healthy_read": "Read the Healthy regulation story first. Look for where the character keeps precision while restoring trust, motion, and human connection.",
+    "archive_ohu": "Healthy"
+  }
+}

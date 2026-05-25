@@ -1,0 +1,137 @@
+{
+  "Stage 1": {
+    "stage_pressure": "This state often tightens around trust, safety, dependence, and emotional predictability.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through control, emotional distance, or testing reliability before trust is allowed.",
+      "I": "I-type resistance may appear through performance, charm, or social movement that avoids deeper uncertainty.",
+      "S": "S-type resistance may appear through quiet self-protection, over-accommodation, or fear of disruption.",
+      "C": "C-type resistance may appear through guarded observation, emotional restraint, or delayed trust formation."
+    },
+
+    "stabilizes_through": "Consistent environments, predictable responses, and reduced vigilance pressure.",
+
+    "watch_for": "Withdrawal, hypervigilance, emotional testing, or protective self-containment.",
+
+    "next_move": "This movement tends to stabilize when support becomes visible without demanding immediate vulnerability."
+  },
+
+  "Stage 2": {
+    "stage_pressure": "This state often tightens around autonomy, independence, control, and self-direction.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through forceful self-reliance or refusal to appear dependent.",
+      "I": "I-type resistance may appear through distraction, deflection, or avoiding visible inadequacy.",
+      "S": "S-type resistance may appear through hesitation, passive accommodation, or fear of disappointing others.",
+      "C": "C-type resistance may appear through overcorrection, perfection pressure, or fear of visible mistakes."
+    },
+
+    "stabilizes_through": "Manageable decisions, visible ownership, and repeatable self-directed movement.",
+
+    "watch_for": "Overcontrol, shame sensitivity, defensive independence, or paralysis before action.",
+
+    "next_move": "This movement tends to stabilize through smaller successful acts of agency instead of overwhelming pressure."
+  },
+
+  "Stage 3": {
+    "stage_pressure": "This state often tightens around initiative, visible action, experimentation, and uncertainty exposure.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through forcing action before emotional readiness exists.",
+      "I": "I-type resistance may appear through scattered momentum or performative initiative without grounded follow-through.",
+      "S": "S-type resistance may appear through over-caution, waiting for permission, or fear of disrupting stability.",
+      "C": "C-type resistance may appear through excessive preparation before visible movement is allowed."
+    },
+
+    "stabilizes_through": "Smaller visible attempts, experimentation, and reduced fear around imperfect action.",
+
+    "watch_for": "Suppressed initiative, hesitation, over-preparation, or fear of disruption.",
+
+    "next_move": "This movement tends to stabilize when the state is allowed to begin before total certainty appears."
+  },
+
+  "Stage 4": {
+    "stage_pressure": "This state often tightens around competence, productivity, comparison, and visible capability.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through overwork, impatience, or identity tied entirely to performance.",
+      "I": "I-type resistance may appear through avoiding structured effort once validation decreases.",
+      "S": "S-type resistance may appear through discouragement, withdrawal, or quiet self-comparison.",
+      "C": "C-type resistance may appear through perfectionism, over-analysis, or fear of measurable failure."
+    },
+
+    "stabilizes_through": "Visible progress, measurable effort, repetition, and sustainable structure.",
+
+    "watch_for": "Comparison fatigue, burnout loops, discouragement, or pressure-driven self-worth.",
+
+    "next_move": "This movement tends to stabilize when effort becomes measurable instead of emotionally generalized."
+  },
+
+  "Stage 5": {
+    "stage_pressure": "This state often tightens around direction, role pressure, and identity visibility.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through forcing direction before identity has stabilized internally.",
+      "I": "I-type resistance may appear through performing identity before it feels emotionally coherent.",
+      "S": "S-type resistance may appear through adapting to roles until personal direction becomes difficult to locate.",
+      "C": "C-type resistance may appear through over-defining identity before movement is allowed."
+    },
+
+    "stabilizes_through": "Reduced fragmentation and clearer alignment between internal values and visible action.",
+
+    "watch_for": "Over-adaptation, identity performance, pressure masking, or collapse between competing roles.",
+
+    "next_move": "This movement tends to stabilize when competing expectations are reduced long enough for clearer direction to reappear."
+  },
+
+  "Stage 6": {
+    "stage_pressure": "This state often tightens around closeness, trust, relational visibility, and emotional exposure.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through emotional distance, guarded independence, or control inside relationships.",
+      "I": "I-type resistance may appear through social closeness that avoids deeper vulnerability.",
+      "S": "S-type resistance may appear through self-sacrifice, emotional silence, or fear of relational disruption.",
+      "C": "C-type resistance may appear through over-analysis, emotional restraint, or difficulty trusting relational ambiguity."
+    },
+
+    "stabilizes_through": "Mutual honesty, lower-pressure connection, and visible emotional safety.",
+
+    "watch_for": "Isolation, guarded attachment, emotional withdrawal, or performative closeness.",
+
+    "next_move": "This movement tends to stabilize through smaller moments of honest connection instead of forced emotional exposure."
+  },
+
+  "Stage 7": {
+    "stage_pressure": "This state often tightens around contribution, usefulness, responsibility, and long-term impact.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through carrying excessive responsibility or identity-through-output.",
+      "I": "I-type resistance may appear through chasing visibility while avoiding deeper contribution fatigue.",
+      "S": "S-type resistance may appear through over-giving, exhaustion, or loss of personal direction inside support roles.",
+      "C": "C-type resistance may appear through over-optimization, unsustainable standards, or contribution paralysis."
+    },
+
+    "stabilizes_through": "Meaningful contribution, sustainable responsibility, and visible usefulness.",
+
+    "watch_for": "Burnout repetition, emotional stagnation, over-responsibility, or loss of long-term meaning.",
+
+    "next_move": "This movement tends to stabilize when contribution becomes intentional instead of endlessly reactive."
+  },
+
+  "Stage 8": {
+    "stage_pressure": "This state often tightens around meaning, reflection, integration, and life-pattern interpretation.",
+
+    "ptype_resistance": {
+      "D": "D-type resistance may appear through difficulty slowing down long enough to integrate the past honestly.",
+      "I": "I-type resistance may appear through avoiding deeper reflection beneath visible positivity or movement.",
+      "S": "S-type resistance may appear through lingering emotional attachment to unresolved history or relational regret.",
+      "C": "C-type resistance may appear through over-analysis of past decisions or fixation on unresolved imperfection."
+    },
+
+    "stabilizes_through": "Coherent reflection, integrated meaning, and reduced collapse into regret loops.",
+
+    "watch_for": "Despair repetition, emotional narrowing, unresolved reflection, or loss of future orientation.",
+
+    "next_move": "This movement tends to stabilize when reflection organizes experience instead of endlessly reliving it."
+  }
+}

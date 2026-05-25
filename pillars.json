@@ -1,0 +1,92 @@
+[
+  {
+    "number": "1",
+    "title": "DISC Identity",
+    "shows": "The pattern your state is moving through right now.",
+    "means": "DISC identifies the state pattern. It does not reduce the person to the pattern.",
+    "summary": "Some traits move louder under pressure. Others move quietly beneath the surface.",
+    "notice": "Notice which trait keeps taking the lead when decisions, stress, or uncertainty appear.",
+    "z9_path": "This is the first doorway into the Z9Coach matrix system.",
+    "visual": "Trait radar and doorway signal"
+  },
+  {
+    "number": "2",
+    "title": "Developmental Stages",
+    "shows": "The life pressure surrounding the current state.",
+    "means": "Behavior is not random. It is shaped by history, pressure, and the stage of life you are moving through.",
+    "summary": "Sometimes the state you feel and the state you show are not fully the same.",
+    "notice": "Notice where the current stage feels stretched, guarded, uncertain, or ready to grow.",
+    "z9_path": "This moves the report from personality into developmental context.",
+    "visual": "Stage alignment and tension cue"
+  },
+  {
+    "number": "3",
+    "title": "Motivation Systems",
+    "shows": "What helps movement return when energy becomes scattered, pressured, or stalled.",
+    "means": "Motivation becomes more stable when the next move matches the current state.",
+    "summary": "The next move should create motion, not pressure.",
+    "notice": "Notice whether the suggested action feels forced or naturally reachable.",
+    "z9_path": "This becomes the bridge into missions, routines, and ReSpark pathways.",
+    "visual": "Best First Move"
+  },
+  {
+    "number": "4",
+    "title": "Cognitive Dissonance",
+    "shows": "Where inner tension may be splitting thought, behavior, emotion, or identity.",
+    "means": "Contradiction is not failure. It is often the place where the next shift begins.",
+    "summary": "Some patterns protect the person long after the original pressure has passed.",
+    "notice": "Notice where the current state feels divided, overcontrolled, withdrawn, or overstretched.",
+    "z9_path": "This is where CoachFree begins identifying friction instead of hiding it.",
+    "visual": "Contradiction and alignment signal"
+  },
+  {
+    "number": "5",
+    "title": "Self-Actualization",
+    "shows": "What the current state may be trying to become beneath the visible behavior.",
+    "means": "CoachFree is a mirror, not a cage.",
+    "summary": "The report is meant to reveal movement, not trap the user inside a label.",
+    "notice": "Notice what feels most alive, honest, restrained, or unfinished right now.",
+    "z9_path": "This opens the deeper identity layer behind the DISC signal.",
+    "visual": "Reflection and identity cue"
+  },
+  {
+    "number": "6",
+    "title": "Social Learning",
+    "shows": "How environments, relationships, and repeated experiences shaped the current state.",
+    "means": "Some patterns were practiced long before they were chosen.",
+    "summary": "People often repeat what helped them survive before they learn what helps them grow.",
+    "notice": "Notice which environments strengthen the current state and which ones distort it.",
+    "z9_path": "This prepares the bridge into narrative interpretation and PType movement.",
+    "visual": "Environmental pressure cue"
+  },
+  {
+    "number": "7",
+    "title": "Zone of Proximal Development",
+    "shows": "The next reachable step between the current state and the next level of movement.",
+    "means": "Growth works best when the step is challenging enough to matter, but safe enough to begin.",
+    "summary": "Small consistent movement often changes more than dramatic pressure.",
+    "notice": "Notice whether the next move creates clarity, resistance, hesitation, or relief.",
+    "z9_path": "This becomes the pacing layer for Lite, coaching, and recursive progression.",
+    "visual": "Next-step and pacing cue"
+  },
+  {
+    "number": "8",
+    "title": "Spiral Harmony",
+    "shows": "How traits, pressure, stage, rhythm, and action begin forming recurring patterns.",
+    "means": "The state is not static. It moves in cycles, spirals, repetitions, and shifts.",
+    "summary": "What repeats often reveals more than what appears once.",
+    "notice": "Notice whether the current pattern feels stabilizing, repeating, escalating, or preparing to change.",
+    "z9_path": "This connects the snapshot to the larger Z9Coach spiral system.",
+    "visual": "Spiral and movement cue"
+  },
+  {
+    "number": "9",
+    "title": "Resonance & Recursion",
+    "shows": "How the current snapshot can become part of a larger self-awareness pattern over time.",
+    "means": "State becomes clearer when it is revisited, reflected on, and compared across moments.",
+    "summary": "The goal is not perfect self-definition. The goal is clearer recognition.",
+    "notice": "Notice what should be observed again later instead of judged immediately.",
+    "z9_path": "This is the bridge from CoachFree into Lite tracking, Pro recursion, and deeper state visibility.",
+    "visual": "Snapshot synthesis and pathway cue"
+  }
+]
