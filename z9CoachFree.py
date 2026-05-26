@@ -314,10 +314,9 @@ def main() -> None:
     trait_snapshot["snapshot"] = snapshot
     trait_snapshot["pillar_notes"] = pillar_notes
 
-    ptype_url = build_ptype_story_url(
-        traits=profile["traits"],
-        stage=current_stage_number,
-        ohu="Healthy",
+    ptype_url = (
+        f"https://z9coach.com/ptype/{primary.lower()}/"
+        f"?stage={current_stage_number}&type={primary}&subtype={subtype}&ohu=Healthy"
     )
 
     fairy_snap = generate_session_snap_readback(

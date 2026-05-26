@@ -16,7 +16,6 @@ DISC_NAMES = {
     "C": "Clarity",
 }
 
-
 PILLAR_TITLES = [
     "DISC Identity",
     "Developmental Stages",
@@ -87,8 +86,14 @@ def generate_result_snapshot_card(snapshot: Dict[str, Any]) -> Figure:
             fontweight="bold",
             transform=ax.transAxes,
         )
+        value_x = 0.32
+
+        # Long labels need extra spacing
+        if field == "Current Stage Context":
+            value_x = 0.40
+
         ax.text(
-            0.32,
+            value_x,
             y,
             str(value),
             fontsize=10,
@@ -258,14 +263,6 @@ def generate_ptype_narrative_cta(
         transform=ax.transAxes,
         wrap=True,
     )
-    ax.text(
-        0.04,
-        0.15,
-        ptype_url,
-        fontsize=9,
-        transform=ax.transAxes,
-        wrap=True,
-    )
 
     return fig
 
@@ -301,8 +298,13 @@ def generate_pillar_mirror_strip(
             fontweight="bold",
             transform=ax.transAxes,
         )
+        note_x = 0.33
+
+        if pillar in {"Zone of Proximal Development", "Resonance & Recursion"}:
+            note_x = 0.44
+
         ax.text(
-            0.33,
+            note_x,
             y,
             note,
             fontsize=9,
