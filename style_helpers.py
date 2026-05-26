@@ -17,21 +17,15 @@ def apply_z9_luxury_theme() -> None:
             --z9-gold: #c9a24a;
             --z9-gold-soft: #ead99d;
             --z9-ivory: #fbf7ef;
-            --z9-ink: #1d2433;
-            --z9-muted: #5f6675;
-            --z9-line: rgba(201, 162, 74, 0.28);
+            --z9-ink: #1f2937;
+            --z9-line: rgba(201, 162, 74, 0.34);
         }
 
         .stApp {
             background:
                 radial-gradient(circle at top left, rgba(201, 162, 74, 0.14), transparent 28rem),
                 linear-gradient(135deg, #101725 0%, #172033 42%, #0d1320 100%);
-            color: var(--z9-ivory);
-        }
-
-        section[data-testid="stSidebar"] {
-            background: #0d1320;
-            border-right: 1px solid var(--z9-line);
+            color: var(--z9-ivory) !important;
         }
 
         .block-container {
@@ -40,24 +34,35 @@ def apply_z9_luxury_theme() -> None:
             padding-bottom: 4rem;
         }
 
-        h1, h2, h3 {
-            letter-spacing: 0;
+        section[data-testid="stSidebar"] {
+            background: #0d1320;
+            border-right: 1px solid var(--z9-line);
+        }
+
+        section[data-testid="stSidebar"] * {
+            color: var(--z9-ivory) !important;
+            opacity: 1 !important;
         }
 
         .z9-hero {
             border: 1px solid var(--z9-line);
             background: linear-gradient(135deg, rgba(251,247,239,0.98), rgba(241,231,205,0.96));
-            color: var(--z9-ink);
+            color: var(--z9-ink) !important;
             padding: 2.1rem;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 22px 70px rgba(0,0,0,0.24);
             margin-bottom: 1.5rem;
         }
 
+        .z9-hero * {
+            color: var(--z9-ink) !important;
+            opacity: 1 !important;
+        }
+
         .z9-eyebrow {
-            color: #7a6225;
+            color: #7a6225 !important;
             font-size: 0.78rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.16em;
             text-transform: uppercase;
             margin-bottom: 0.5rem;
@@ -65,13 +70,11 @@ def apply_z9_luxury_theme() -> None:
 
         .z9-hero h1 {
             margin: 0 0 0.75rem 0;
-            color: var(--z9-ink);
             font-size: clamp(2rem, 4vw, 3.8rem);
             line-height: 1;
         }
 
         .z9-hero p {
-            color: #384152;
             max-width: 760px;
             font-size: 1.05rem;
             line-height: 1.65;
@@ -84,129 +87,148 @@ def apply_z9_luxury_theme() -> None:
         }
 
         .z9-section h2 {
-            color: var(--z9-gold-soft);
+            color: #d7b45a !important;
             font-size: 1.55rem;
+            font-weight: 850;
             margin-bottom: 0.25rem;
+            opacity: 1 !important;
         }
 
         .z9-section p {
-            color: #d7deea;
+            color: #fbf7ef !important;
             margin-top: 0;
+            opacity: 1 !important;
         }
 
-        .z9-card {
-            border: 1px solid rgba(201, 162, 74, 0.32);
-            background: rgba(251,247,239,0.96);
-            color: var(--z9-ink);
-            border-radius: 8px;
-            padding: 1.2rem;
+        .z9-card,
+        .z9-snapshot-item,
+        .z9-meta-item {
+            border: 1px solid rgba(201,162,74,0.34);
+            background: #f8f3ea !important;
+            color: #1f2937 !important;
+            border-radius: 12px;
+            padding: 1rem;
             margin: 0.75rem 0;
-            box-shadow: 0 14px 36px rgba(0,0,0,0.16);
+            box-shadow: 0 14px 34px rgba(15,23,42,0.14);
+            opacity: 1 !important;
+        }
+
+        .z9-card *,
+        .z9-snapshot-item *,
+        .z9-meta-item * {
+            color: #1f2937 !important;
+            opacity: 1 !important;
         }
 
         .z9-card h3 {
-            color: #141b2b;
+            color: #111827 !important;
             margin-top: 0;
+            margin-bottom: 0.4rem;
         }
 
-        .z9-card p,
-        .z9-card li {
-            color: #3f4858;
-        }
-
-        .z9-snapshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 0.75rem;
-            margin: 1rem 0;
-        }
-
-        .z9-snapshot-item {
-            border: 1px solid rgba(201,162,74,0.34);
-            background: rgba(251,247,239,0.97);
-            color: var(--z9-ink);
-            border-radius: 8px;
-            padding: 1rem;
-        }
-
-        .z9-snapshot-label {
-            color: #7a6225;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.11em;
-            font-weight: 800;
-            margin-bottom: 0.3rem;
-        }
-
-        .z9-snapshot-value {
-            color: #182033;
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 1.4;
-        }
-
-        .z9-metadata {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 0.65rem;
-            margin: 1rem 0;
-        }
-
-        .z9-meta-item {
-            border: 1px solid rgba(201,162,74,0.36);
-            background: rgba(13,19,32,0.64);
-            border-radius: 8px;
-            padding: 0.9rem;
-        }
-
-        .z9-meta-label {
-            color: #cfd7e6;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .z9-meta-value {
-            color: var(--z9-gold-soft);
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-top: 0.2rem;
-        }
-
+        .z9-snapshot-grid,
+        .z9-metadata,
         .z9-cta-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
             gap: 0.85rem;
-            margin-top: 1rem;
+            margin: 1rem 0;
+        }
+
+        .z9-snapshot-label,
+        .z9-meta-label {
+            color: #7a6225 !important;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.11em;
+            font-weight: 900;
+            margin-bottom: 0.35rem;
+        }
+
+        .z9-snapshot-value,
+        .z9-meta-value {
+            color: #111827 !important;
+            font-size: 1.02rem;
+            font-weight: 800;
+            line-height: 1.35;
         }
 
         .z9-cta {
             display: block;
             text-decoration: none;
             color: #111827 !important;
-            background: linear-gradient(135deg, #f7e8b0, #c9a24a);
+            background: linear-gradient(135deg,#f2d98a,#c9a24a) !important;
             border: 1px solid rgba(255,255,255,0.38);
             border-radius: 8px;
             padding: 0.9rem 1rem;
             font-weight: 800;
             text-align: center;
             box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+            opacity: 1 !important;
         }
 
-        .z9-cta.secondary {
-            color: var(--z9-ivory) !important;
-            background: rgba(17,24,39,0.82);
-            border-color: var(--z9-line);
+        .z9-cta * {
+            color: #111827 !important;
+            opacity: 1 !important;
         }
 
         div.stButton > button,
-        div[data-testid="stDownloadButton"] button {
-            background: linear-gradient(135deg, #f7e8b0, #c9a24a);
-            color: #111827;
-            border: 0;
-            border-radius: 8px;
-            font-weight: 800;
-            min-height: 2.8rem;
+        div[data-testid="stDownloadButton"] button,
+        div[data-testid="stLinkButton"] a {
+            background: linear-gradient(135deg,#f2d98a,#c9a24a) !important;
+            color: #111827 !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-weight: 800 !important;
+            min-height: 2.8rem !important;
+            box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+            opacity: 1 !important;
+        }
+
+        div.stButton > button *,
+        div[data-testid="stDownloadButton"] button *,
+        div[data-testid="stLinkButton"] a * {
+            color: #111827 !important;
+            opacity: 1 !important;
+        }
+
+        [data-testid="stFormSubmitButton"] button,
+        [data-testid="stFormSubmitButton"] button * {
+            color: #111827 !important;
+            background: linear-gradient(135deg,#f2d98a,#c9a24a) !important;
+            font-weight: 800 !important;
+        }
+
+        [data-testid="stForm"] {
+            background: rgba(9,16,28,0.92) !important;
+            border: 1px solid rgba(201,162,74,0.32) !important;
+            border-radius: 14px !important;
+            padding: 1.25rem !important;
+            opacity: 1 !important;
+        }
+
+        [data-testid="stForm"] *,
+        [data-testid="stRadio"] *,
+        [data-baseweb="radio"] * {
+            color: #f8f3ea !important;
+            opacity: 1 !important;
+        }
+
+        [data-testid="stForm"] h1,
+        [data-testid="stForm"] h2,
+        [data-testid="stForm"] h3 {
+            color: #ead99d !important;
+            opacity: 1 !important;
+        }
+
+        [data-testid="stSelectbox"] *,
+        [data-baseweb="select"] *,
+        [data-testid="stSlider"] * {
+            opacity: 1 !important;
+        }
+
+        section.main .block-container * {
+            opacity: 1 !important;
         }
         </style>
         """,
@@ -250,7 +272,7 @@ def render_metadata(items: Mapping[str, object]) -> None:
         blocks.append(
             f"""
             <div class="z9-meta-item">
-                <div class="z9-meta-label">{html.escape(label)}</div>
+                <div class="z9-meta-label">{html.escape(str(label))}</div>
                 <div class="z9-meta-value">{html.escape(str(value))}</div>
             </div>
             """
@@ -263,12 +285,18 @@ def render_metadata(items: Mapping[str, object]) -> None:
 
 
 def render_snapshot_grid(items: Mapping[str, object]) -> None:
+    clean_items = {k: v for k, v in items.items() if v not in ("", None, "-")}
+
+    if not clean_items:
+        st.info("Complete the assessment to generate the Z9CoachFree State Snapshot.")
+        return
+
     blocks = []
-    for label, value in items.items():
+    for label, value in clean_items.items():
         blocks.append(
             f"""
             <div class="z9-snapshot-item">
-                <div class="z9-snapshot-label">{html.escape(label)}</div>
+                <div class="z9-snapshot-label">{html.escape(str(label))}</div>
                 <div class="z9-snapshot-value">{html.escape(str(value))}</div>
             </div>
             """
@@ -281,11 +309,14 @@ def render_snapshot_grid(items: Mapping[str, object]) -> None:
 
 
 def render_card(title: str, body: str) -> None:
+    if not body:
+        return
+
     st.markdown(
         f"""
         <div class="z9-card">
-            <h3>{html.escape(title)}</h3>
-            <p>{html.escape(body)}</p>
+            <h3>{html.escape(str(title))}</h3>
+            <p>{html.escape(str(body))}</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -296,11 +327,11 @@ def render_narrative_cta(title: str, body: str, href: str, label: str) -> None:
     st.markdown(
         f"""
         <div class="z9-card">
-            <h3>{html.escape(title)}</h3>
-            <p>{html.escape(body)}</p>
+            <h3>{html.escape(str(title))}</h3>
+            <p>{html.escape(str(body))}</p>
             <div class="z9-cta-grid">
                 <a class="z9-cta" href="{html.escape(href, quote=True)}" target="_blank">
-                    {html.escape(label)}
+                    {html.escape(str(label))}
                 </a>
             </div>
         </div>
