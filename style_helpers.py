@@ -7,8 +7,21 @@ from typing import Iterable, Mapping
 import streamlit as st
 
 
+BLUE = "#1f2937"
+GOLD = "#c9a24a"
+IVORY = "#f8f3ea"
+
+
+def _render_html(markup: str) -> None:
+    """Render trusted app-owned HTML without exposing raw markup in the UI."""
+    if hasattr(st, "html"):
+        st.html(markup)
+    else:
+        st.markdown(markup, unsafe_allow_html=True)
+
+
 def apply_z9_luxury_theme() -> None:
-    st.markdown(
+    _render_html(
         """
         <style>
         :root {
@@ -17,6 +30,7 @@ def apply_z9_luxury_theme() -> None:
             --z9-gold: #c9a24a;
             --z9-gold-soft: #ead99d;
             --z9-ivory: #fbf7ef;
+            --z9-card: #f8f3ea;
             --z9-ink: #1f2937;
             --z9-line: rgba(201, 162, 74, 0.34);
         }
@@ -54,6 +68,7 @@ def apply_z9_luxury_theme() -> None:
             margin-bottom: 1.5rem;
         }
 
+        .z9-hero,
         .z9-hero * {
             color: var(--z9-ink) !important;
             opacity: 1 !important;
@@ -95,7 +110,7 @@ def apply_z9_luxury_theme() -> None:
         }
 
         .z9-section p {
-            color: #fbf7ef !important;
+            color: var(--z9-ivory) !important;
             margin-top: 0;
             opacity: 1 !important;
         }
@@ -104,8 +119,8 @@ def apply_z9_luxury_theme() -> None:
         .z9-snapshot-item,
         .z9-meta-item {
             border: 1px solid rgba(201,162,74,0.34);
-            background: #f8f3ea !important;
-            color: #1f2937 !important;
+            background: var(--z9-card) !important;
+            color: var(--z9-ink) !important;
             border-radius: 12px;
             padding: 1rem;
             margin: 0.75rem 0;
@@ -113,10 +128,13 @@ def apply_z9_luxury_theme() -> None:
             opacity: 1 !important;
         }
 
+        .z9-card,
         .z9-card *,
+        .z9-snapshot-item,
         .z9-snapshot-item *,
+        .z9-meta-item,
         .z9-meta-item * {
-            color: #1f2937 !important;
+            color: var(--z9-ink) !important;
             opacity: 1 !important;
         }
 
@@ -124,6 +142,12 @@ def apply_z9_luxury_theme() -> None:
             color: #111827 !important;
             margin-top: 0;
             margin-bottom: 0.4rem;
+        }
+
+        .z9-card p {
+            color: var(--z9-ink) !important;
+            line-height: 1.55;
+            margin-bottom: 0;
         }
 
         .z9-snapshot-grid,
@@ -167,6 +191,7 @@ def apply_z9_luxury_theme() -> None:
             opacity: 1 !important;
         }
 
+        .z9-cta,
         .z9-cta * {
             color: #111827 !important;
             opacity: 1 !important;
@@ -210,14 +235,14 @@ def apply_z9_luxury_theme() -> None:
         [data-testid="stForm"] *,
         [data-testid="stRadio"] *,
         [data-baseweb="radio"] * {
-            color: #f8f3ea !important;
+            color: var(--z9-ivory) !important;
             opacity: 1 !important;
         }
 
         [data-testid="stForm"] h1,
         [data-testid="stForm"] h2,
         [data-testid="stForm"] h3 {
-            color: #ead99d !important;
+            color: var(--z9-gold-soft) !important;
             opacity: 1 !important;
         }
 
@@ -231,21 +256,19 @@ def apply_z9_luxury_theme() -> None:
             opacity: 1 !important;
         }
         </style>
-        """,
-        unsafe_allow_html=True,
+        """
     )
 
 
 def render_section(title: str, subtitle: str = "") -> None:
     subtitle_html = f"<p>{html.escape(subtitle)}</p>" if subtitle else ""
-    st.markdown(
+    _render_html(
         f"""
         <div class="z9-section">
             <h2>{html.escape(title)}</h2>
             {subtitle_html}
         </div>
-        """,
-        unsafe_allow_html=True,
+        """
     )
 
 
@@ -254,15 +277,14 @@ def render_hero(
     body: str,
     eyebrow: str = "Z9CoachFree State Snapshot",
 ) -> None:
-    st.markdown(
+    _render_html(
         f"""
         <div class="z9-hero">
             <div class="z9-eyebrow">{html.escape(eyebrow)}</div>
             <h1>{html.escape(title)}</h1>
             <p>{html.escape(body)}</p>
         </div>
-        """,
-        unsafe_allow_html=True,
+        """
     )
 
 
@@ -278,10 +300,7 @@ def render_metadata(items: Mapping[str, object]) -> None:
             """
         )
 
-    st.markdown(
-        f"<div class=\"z9-metadata\">{''.join(blocks)}</div>",
-        unsafe_allow_html=True,
-    )
+    _render_html(f"<div class=\"z9-metadata\">{''.join(blocks)}</div>")
 
 
 def render_snapshot_grid(items: Mapping[str, object]) -> None:
@@ -302,29 +321,25 @@ def render_snapshot_grid(items: Mapping[str, object]) -> None:
             """
         )
 
-    st.markdown(
-        f"<div class=\"z9-snapshot-grid\">{''.join(blocks)}</div>",
-        unsafe_allow_html=True,
-    )
+    _render_html(f"<div class=\"z9-snapshot-grid\">{''.join(blocks)}</div>")
 
 
 def render_card(title: str, body: str) -> None:
     if not body:
         return
 
-    st.markdown(
+    _render_html(
         f"""
         <div class="z9-card">
             <h3>{html.escape(str(title))}</h3>
             <p>{html.escape(str(body))}</p>
         </div>
-        """,
-        unsafe_allow_html=True,
+        """
     )
 
 
 def render_narrative_cta(title: str, body: str, href: str, label: str) -> None:
-    st.markdown(
+    _render_html(
         f"""
         <div class="z9-card">
             <h3>{html.escape(str(title))}</h3>
@@ -335,8 +350,7 @@ def render_narrative_cta(title: str, body: str, href: str, label: str) -> None:
                 </a>
             </div>
         </div>
-        """,
-        unsafe_allow_html=True,
+        """
     )
 
 
@@ -350,7 +364,4 @@ def render_cta_grid(items: Iterable[Mapping[str, str]]) -> None:
             f'<a class="z9-cta{variant}" href="{href}" target="_blank">{label}</a>'
         )
 
-    st.markdown(
-        f"<div class=\"z9-cta-grid\">{''.join(links)}</div>",
-        unsafe_allow_html=True,
-    )
+    _render_html(f"<div class=\"z9-cta-grid\">{''.join(links)}</div>")

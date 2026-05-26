@@ -153,20 +153,42 @@ def _snapshot_table(pdf: FPDF, snapshot: Dict[str, Any]) -> None:
 
 
 def _pillar_card(pdf: FPDF, title: str, note: str, number: int) -> None:
-    if pdf.get_y() > 245:
+    """Render one unlocked 9-pillar item as a vertical stack.
+
+    Important: fpdf2 keeps the cursor's x-position after some multi_cell
+    calls unless explicitly reset. Without new_x/new_y + set_x(), the note
+    can begin at the right edge and render as a clipped horizontal line.
+    """
+    if pdf.get_y() > 242:
         pdf.add_page()
 
     width = _usable_width(pdf)
 
+    pdf.set_x(pdf.l_margin)
     pdf.set_text_color(*INK)
-    pdf.set_font("Helvetica", "B", 10)
-    pdf.multi_cell(width, 6, f"{number}. {clean_text(title)}", border=0)
+    pdf.set_font("Helvetica", "B", 11)
+    pdf.multi_cell(
+        width,
+        6.5,
+        f"{number}. {clean_text(title)}",
+        border=0,
+        new_x="LMARGIN",
+        new_y="NEXT",
+    )
 
+    pdf.set_x(pdf.l_margin)
     pdf.set_text_color(*INK)
-    pdf.set_font("Helvetica", "", 9)
-    pdf.multi_cell(width, 5.5, clean_text(note), border=0)
+    pdf.set_font("Helvetica", "", 10)
+    pdf.multi_cell(
+        width,
+        5.8,
+        clean_text(note),
+        border=0,
+        new_x="LMARGIN",
+        new_y="NEXT",
+    )
 
-    pdf.ln(3)
+    pdf.ln(4)
 
 
 def _coerce_snapshot(data: Dict[str, Any]) -> Dict[str, Any]:
