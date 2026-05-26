@@ -1,6 +1,7 @@
 # File: z9CoachFree.py
 # Title: Z9CoachFree State Snapshot App
 
+import os
 import random
 from typing import Any, Dict, List
 
@@ -8,8 +9,8 @@ import pandas as pd
 import streamlit as st
 
 from analyze_profile import analyze_profile
-from fairy_coachfree import generate_fairy_whisper, generate_session_snap_readback
-from opportunity_loader import build_ptype_story_url, load_basic_opportunities
+from fairy_coachfree import generate_session_snap_readback
+from opportunity_loader import build_ptype_story_url
 from pdf_export import generate_simple_report
 from style_helpers import (
     apply_z9_luxury_theme,
@@ -34,18 +35,21 @@ from z9_spiral_logic import map_disc_to_stage
 
 DEFAULT_STAGE_SUMMARIES = {f"Stage {i}": "" for i in range(1, 9)}
 
+DISC_LINK = "https://z9coach.com/disc/"
+SELF_GUIDED_LINK = "https://z9coach.com/respark_full_program"
+
 
 def safe_load(path: str, default: Any) -> Any:
     try:
         return load_json_file(path)
-    except FileNotFoundError:
+    except Exception:
         return default
 
 
 def load_questions() -> List[Dict[str, Any]]:
     try:
         return load_json_file("master_disc_questions1.json")
-    except FileNotFoundError:
+    except Exception:
         return load_json_file("master_disc_questions.json")
 
 
@@ -87,39 +91,57 @@ def stage_number(stage: str) -> str:
     return digits or "1"
 
 
+def logo_path() -> str | None:
+    candidates = [
+        "assets/logos/z9coach_logo.png",
+        "assets/logos/logo.png",
+        "assets/logos/z9coach_zoom_background_1920x1080.png",
+        "assets/z9coach_logo.png",
+        "assets/logo.png",
+    ]
+    for path in candidates:
+        if os.path.exists(path):
+            return path
+    return None
+
+
 def log_profile(profile: dict, final_stage: str) -> None:
     entry = {
         "timestamp": pd.Timestamp.now().isoformat(),
         "traits": profile["traits"],
-        "trait_score": profile["trait_score"],
-        "harmony_ratio": profile["harmony_ratio"],
+        "trait_score": profile.get("trait_score"),
+        "harmony_ratio": profile.get("harmony_ratio"),
         "stage": final_stage,
     }
     log = safe_load("assessment_log.json", default=[])
+    if not isinstance(log, list):
+        log = []
     log.append(entry)
     save_json_file(log, "assessment_log.json")
 
 
-def render_sidebar(stage_summaries: Dict[str, str]) -> None:
+def render_sidebar(stage_summaries: Dict[str, Any]) -> None:
     st.sidebar.subheader("Stage Notes")
-    for label, tip in stage_summaries.items():
+    for label, value in stage_summaries.items():
+        if isinstance(value, dict):
+            tip = value.get("summary", "")
+        else:
+            tip = str(value)
         st.sidebar.markdown(f"**{label}**: {tip}")
 
     st.sidebar.markdown("---")
-    st.sidebar.caption("Z9CoachFree is the recognition layer. Lite adds continuity.")
+    st.sidebar.caption("Z9CoachFree is the recognition layer.")
 
 
 def render_assessment_form(
     questions: List[Dict[str, Any]],
-    stage_summaries: Dict[str, str],
+    stage_summaries: Dict[str, Any],
 ) -> tuple[bool, Dict[int, str], str]:
     sampled = initialize_questions(questions)
 
     with st.form("z9coachfree_assessment"):
         st.subheader("DISC State Assessment")
-        st.caption(
-            "Answer from your present state. This is a state snapshot, not a permanent identity label."
-        )
+        st.caption("Answer from your present state. This is a snapshot, not a permanent identity label.")
 
         responses: Dict[int, str] = {}
 
@@ -174,10 +196,7 @@ def render_stage_pressure_cards(
 
     render_card(
         "Stage Pressure",
-        stage_data.get(
-            "stage_pressure",
-            "The current state is showing pressure through the mapped stage layer.",
-        ),
+        stage_data.get("stage_pressure", "The current state is showing pressure through the mapped stage layer."),
     )
 
     resistance = stage_data.get("ptype_resistance", {}).get(
@@ -196,12 +215,13 @@ def render_stage_pressure_cards(
 
 
 def main() -> None:
-    st.set_page_config(
-        page_title="Z9CoachFree State Snapshot",
-        layout="wide",
-    )
+    st.set_page_config(page_title="Z9CoachFree State Snapshot", layout="wide")
 
     apply_z9_luxury_theme()
+
+    path = logo_path()
+    if path:
+        st.image(path, width=260)
 
     render_hero(
         "Z9CoachFree",
@@ -226,28 +246,19 @@ def main() -> None:
             "Layer": "Recognition",
             "Output": "State Snapshot",
             "Narrative Route": "Healthy PType",
-            "Next Depth": "Lite",
+            "Next Depth": "DISC Matrix",
         }
     )
 
-    render_section(
-        "Mood / State Input",
-        "This anchors the snapshot in the present moment.",
-    )
+    render_section("Mood / State Input", "This anchors the snapshot in the present moment.")
     mood = st.slider("Current state input", 0, 10, 5, 1)
     st.markdown(f"**Current state:** {mood}/10")
 
-    render_section(
-        "Assessment",
-        "The scoring logic remains preserved. The presentation layer is what has changed.",
-    )
+    render_section("Assessment", "The scoring logic remains preserved. The presentation layer is what has changed.")
     submit, responses, perceived_stage = render_assessment_form(questions, stage_summaries)
 
     if not submit:
-        render_section(
-            "Snapshot Preview",
-            "Complete the assessment to generate your Z9CoachFree State Snapshot.",
-        )
+        render_section("Snapshot Preview", "Complete the assessment to generate your Z9CoachFree State Snapshot.")
         render_card(
             "What this creates",
             (
@@ -259,25 +270,49 @@ def main() -> None:
 
     sampled = st.session_state.coachfree_sampled_questions
 
-    # ========================= LOCKED ASSESSMENT LOGIC =========================
-    # Scoring math and profile analysis remain protected. This block only normalizes
-    # answer strings so both the old and updated question files score correctly.
     d, i, s, c = score_assessment(sampled, responses)
     profile = analyze_profile(d, i, s, c, stage_label=perceived_stage)
     auto_stage = map_disc_to_stage(d, i, s, c)
 
-    if not auto_stage or not auto_stage.startswith("Stage "):
+    if not auto_stage or not str(auto_stage).startswith("Stage "):
         auto_stage = "Stage 1"
-    # ======================= END LOCKED ASSESSMENT LOGIC =======================
 
     primary = dominant_trait(profile)
     secondary = secondary_trait(profile["traits"], primary)
     subtype = f"{primary}{secondary}"
     current_stage_number = stage_number(auto_stage)
 
-    trait_snapshot = summarize_trait(profile["traits"], auto_stage, mood)
+    trait_snapshot_raw = summarize_trait(profile["traits"], auto_stage, mood)
+    trait_snapshot = trait_snapshot_raw if isinstance(trait_snapshot_raw, dict) else {}
+
     snapshot = trait_snapshot.get("snapshot", {})
     pillar_notes = trait_snapshot.get("pillar_notes", {})
+
+    if not snapshot:
+        snapshot = {
+            "Primary Doorway": primary,
+            "Secondary Signal": secondary,
+            "P-Type": subtype,
+            "Expression Band": f"{primary} state with {secondary} secondary signal",
+            "Current Stage Context": auto_stage,
+            "Best First Move": "Open the Healthy PType regulation story and notice how this state stabilizes."
+        }
+
+    if not pillar_notes:
+        pillar_notes = {
+            "DISC Identity": "The report begins by identifying the dominant state signal.",
+            "Developmental Stages": "The state is read inside its current developmental pressure.",
+            "Motivation Systems": "The next move should create motion without forcing the whole system.",
+            "Cognitive Dissonance": "This names where visible behavior and inner pressure may split.",
+            "Self-Actualization": "The state is reflected as movement, not a fixed identity.",
+            "Social Learning": "The pattern may have been practiced before it was consciously chosen.",
+            "Zone of Proximal Development": "The next step should stretch the state without overwhelming it.",
+            "Spiral Harmony": "The snapshot shows one point in a larger movement pattern.",
+            "Resonance & Recursion": "The state should be revisited later, not judged permanently."
+        }
+
+    trait_snapshot["snapshot"] = snapshot
+    trait_snapshot["pillar_notes"] = pillar_notes
 
     ptype_url = build_ptype_story_url(
         traits=profile["traits"],
@@ -294,12 +329,8 @@ def main() -> None:
         stage_data=path_map,
         session_result=None,
     )
-
-    opportunities = load_basic_opportunities(
-        traits=profile["traits"],
-        mood=mood,
-        stage=auto_stage,
-    )
+    if not isinstance(fairy_snap, dict):
+        fairy_snap = {}
 
     log_profile(profile, auto_stage)
 
@@ -318,19 +349,18 @@ def main() -> None:
     )
     render_snapshot_grid(snapshot)
 
-    st.pyplot(generate_result_snapshot_card(snapshot))
+    if snapshot:
+        st.pyplot(generate_result_snapshot_card(snapshot))
 
-    render_section(
-        "Current State Readback",
-        "The state is being reflected, not fixed into a permanent label.",
-    )
-    render_card("State Readback", trait_snapshot.get("state_readback", ""))
-    render_card("Watch For", trait_snapshot.get("watch_for", ""))
+    state_readback = trait_snapshot.get("state_readback", "")
+    watch_for = trait_snapshot.get("watch_for", "")
 
-    render_section(
-        "DISC Identity Signal",
-        "DISC identifies the state pattern.",
-    )
+    if state_readback or watch_for:
+        render_section("Current State Readback", "The state is being reflected, not fixed into a permanent label.")
+        render_card("State Readback", state_readback)
+        render_card("Watch For", watch_for)
+
+    render_section("DISC Identity Signal", "DISC identifies the state pattern.")
     st.pyplot(generate_radar_chart(profile["traits"]))
 
     render_section(
@@ -348,17 +378,14 @@ def main() -> None:
 
     render_section(
         "Fairy Session Snap",
-        "The Fairy voice now reads the session/render movement instead of giving generic encouragement.",
+        "The session readback shows what became visible through the current state movement.",
     )
-    render_card("Session Signal", fairy_snap["session_signal"])
-    render_card("State Movement", fairy_snap["state_movement"])
-    render_card("Change Readback", fairy_snap["change_readback"])
-    render_card("Regulation Cue", fairy_snap["regulation_cue"])
+    render_card("Session Signal", fairy_snap.get("session_signal", "The session made the current state easier to see."))
+    render_card("State Movement", fairy_snap.get("state_movement", "The current pattern became more visible through the session."))
+    render_card("Change Readback", fairy_snap.get("change_readback", "The render showed how the state moves under pressure."))
+    render_card("Regulation Cue", fairy_snap.get("regulation_cue", "The Healthy PType path shows the regulation movement."))
 
-    render_section(
-        "Healthy PType Narrative Path",
-        "The app now routes from product CTA to narrative CTA.",
-    )
+    render_section("Healthy PType Narrative Path", "Read the regulation story connected to this state.")
     render_narrative_cta(
         "Open the Healthy Regulation Story",
         (
@@ -378,12 +405,9 @@ def main() -> None:
         )
     )
 
-    if opportunities:
-        render_card("Narrative Opportunity", opportunities[0])
-
     render_section(
         "Light 9-Pillar State Mirror",
-        "This is the recognition-level pillar readback. Lite, Pro, and Plus deepen this same structure.",
+        "This is the recognition-level pillar readback. Each line names one way the current state is being read.",
     )
     st.pyplot(generate_pillar_mirror_strip(pillar_notes))
 
@@ -391,20 +415,31 @@ def main() -> None:
         render_card(f"Pillar {index}: {title}", note)
 
     render_section(
-        "Download Snapshot",
-        "Export the Z9CoachFree State Snapshot as a PDF.",
+        "Next Path",
+        "Continue exploring the state through the DISC matrix or the self-guided pathway.",
     )
+    col1, col2 = st.columns(2)
+    with col1:
+        st.link_button("Open DISC Matrix", DISC_LINK, type="primary")
+    with col2:
+        st.link_button("Open Self-Guided Programs", SELF_GUIDED_LINK, type="primary")
+
+    render_section("Download Snapshot", "Export the Z9CoachFree State Snapshot as a PDF.")
 
     report_data = {
-        "trait_summary": trait_snapshot,
-        "dominant_trait": primary,
-        "secondary_trait": secondary,
-        "ptype": subtype,
-        "stage": auto_stage,
-        "mood": mood,
-        "alignment_cue": fairy_snap["compact"],
-        "pillars": [],
-    }
+    "trait_summary": trait_snapshot,
+    "dominant_trait": primary,
+    "secondary_trait": secondary,
+    "ptype": subtype,
+    "stage": auto_stage,
+    "mood": mood,
+    "alignment_cue": fairy_snap.get("compact", ""),
+    "ptype_bridge": trait_snapshot.get(
+        "ptype_bridge",
+        "DISC identifies the state pattern. PType reveals the same state through narrative movement."
+    ),
+    "pillars": [],
+}
 
     pdf_bytes = generate_simple_report(report_data)
 
@@ -413,18 +448,6 @@ def main() -> None:
         pdf_bytes,
         "Z9CoachFree_State_Snapshot.pdf",
         "application/pdf",
-    )
-
-    render_section(
-        "Next Path",
-        "CoachFree recognizes. Lite adds profile/session continuity. Pro adds recursive interpretation. Plus adds longitudinal integration.",
-    )
-    render_card(
-        "Next Depth",
-        (
-            "Return later to compare the state again, or continue into Lite when you are ready "
-            "for Profile Snap, Session/Game Snap, 9-Pillar perspective, Combined Report, and update reports."
-        ),
     )
 
     st.markdown("---")

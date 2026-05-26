@@ -1,1 +1,122 @@
-[]
+[
+    {
+        "timestamp": "2026-05-25T23:04:41.960469",
+        "traits": {
+            "D": 25,
+            "I": 19,
+            "S": 19,
+            "C": 38
+        },
+        "trait_score": 59.44,
+        "harmony_ratio": 93.62,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-25T23:08:00.854062",
+        "traits": {
+            "D": 25,
+            "I": 19,
+            "S": 19,
+            "C": 38
+        },
+        "trait_score": 59.44,
+        "harmony_ratio": 93.62,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-25T23:17:24.616955",
+        "traits": {
+            "D": 25,
+            "I": 19,
+            "S": 19,
+            "C": 38
+        },
+        "trait_score": 59.44,
+        "harmony_ratio": 93.62,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-25T23:49:52.577409",
+        "traits": {
+            "D": 25,
+            "I": 25,
+            "S": 19,
+            "C": 31
+        },
+        "trait_score": 61.0,
+        "harmony_ratio": 97.0,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-25T23:53:01.477631",
+        "traits": {
+            "D": 25,
+            "I": 25,
+            "S": 19,
+            "C": 31
+        },
+        "trait_score": 61.0,
+        "harmony_ratio": 97.0,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-26T00:00:17.530124",
+        "traits": {
+            "D": 25,
+            "I": 19,
+            "S": 44,
+            "C": 12
+        },
+        "trait_score": 57.75,
+        "harmony_ratio": 90.5,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-26T00:11:04.181768",
+        "traits": {
+            "D": 25,
+            "I": 25,
+            "S": 25,
+            "C": 25
+        },
+        "trait_score": 62.5,
+        "harmony_ratio": 100.0,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-26T00:15:43.017343",
+        "traits": {
+            "D": 25,
+            "I": 25,
+            "S": 25,
+            "C": 25
+        },
+        "trait_score": 62.5,
+        "harmony_ratio": 100.0,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-26T00:58:50.273500",
+        "traits": {
+            "D": 25,
+            "I": 25,
+            "S": 19,
+            "C": 31
+        },
+        "trait_score": 61.0,
+        "harmony_ratio": 97.0,
+        "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-26T03:09:15.198125",
+        "traits": {
+            "D": 25,
+            "I": 19,
+            "S": 12,
+            "C": 44
+        },
+        "trait_score": 57.75,
+        "harmony_ratio": 90.5,
+        "stage": "Stage 2"
+    }
+]
