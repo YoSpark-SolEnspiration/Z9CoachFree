@@ -118,5 +118,17 @@
         "trait_score": 57.75,
         "harmony_ratio": 90.5,
         "stage": "Stage 2"
+    },
+    {
+        "timestamp": "2026-05-26T21:52:45.304114",
+        "traits": {
+            "D": 12,
+            "I": 25,
+            "S": 31,
+            "C": 31
+        },
+        "trait_score": 59.19,
+        "harmony_ratio": 93.62,
+        "stage": "Stage 2"
     }
 ]
